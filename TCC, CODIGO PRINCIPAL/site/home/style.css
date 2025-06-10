@@ -1,0 +1,437 @@
+/*area inicial*/
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; 
+    background-image: url('../imagens/backgroundvazio.jpg'); 
+    background-size: cover;
+    background-position: top center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+body {
+    position: relative; 
+    padding-top: 0; 
+    transition: padding-top 0.5s ease-in-out; 
+}
+
+/* header, navbar, botoes, textos e imagem */
+.btn-trans, .btn-ntrans {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    font-size: 0.8em; 
+    margin: 3px;     
+    width: 80px; 
+    height: 35px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.btn-trans {
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-trans:hover {
+    background-color: #e6d3d3;
+    color: black;
+    transition: 0.5s;
+}
+
+.btn-ntrans {
+    background-color: #fff;
+    color: #000;
+}
+
+.base-top-area-inicial {
+    width: 100%; 
+    padding: 5px 15px; 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    justify-content: space-between; 
+}
+
+.img-inicio {
+    display: flex;
+    align-items: center;
+}
+
+.btn-inicial {
+    display: flex;
+    justify-content: flex-end; 
+    flex-wrap: wrap; 
+    margin-left: auto;
+}
+
+.navbar {
+    background-color: #52220b;
+    color: white;
+    position: fixed; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    height: auto; 
+    pointer-events: none; 
+}
+
+.navbar.navbar-visible {
+    opacity: 1 !important; 
+    visibility: visible !important;
+    pointer-events: auto !important; 
+}
+
+.navbar .base-top-area-inicial {
+    padding-top: 5px; 
+    padding-bottom: 5px; 
+    justify-content: space-between; 
+}
+
+.navbar-img { 
+    width: 50px; 
+    max-width: 60px;
+    height: auto;
+}
+
+.titulo-nav {
+    font-family: "DynaPuff", system-ui;
+    font-size: 160%; 
+    color: #feedc9;
+    white-space: nowrap; 
+    flex-grow: 1; 
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content; 
+}
+
+.navbar .btn-trans, .navbar .btn-ntrans {
+    width: 80px; 
+    height: 35px; 
+    margin: 3px; 
+    font-size: 0.8em; 
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; 
+    margin: 0;
+    padding: 5px 0; 
+    width: 100%; 
+    justify-content: center; 
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px; 
+    display: block;
+    font-size: 0.9em; 
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.main-header {
+    color: white; 
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out; 
+    position: relative; 
+    z-index: 1; 
+}
+
+.main-header.header-hidden {
+    opacity: 0 !important; 
+    visibility: hidden !important;
+    transform: translateY(-100%) !important; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.main-header .base-top-area-inicial {
+    padding-top: 20px;
+    padding-left: 5%; 
+    padding-right: 5%; 
+}
+
+.main-header .img-inicio {
+    width: 25%; 
+    min-width: 150px; 
+    max-width: 180px; 
+}
+
+.main-header .img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+
+.main-header .btn-trans, .main-header .btn-ntrans {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    font-size: 1em; 
+}
+
+/* bloco da area inicial */
+.area-inicial {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+.titulo-area {
+    display: flex;
+    flex-direction: column; 
+    color: white;
+    text-align:center;
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
+    transition: all 0.3s ease;
+    padding: 20px 0; 
+}
+
+.dynapuff {
+    font-family: "DynaPuff", system-ui;
+    font-size: 200%; 
+    color: #feedc9;
+    margin: 0 auto; 
+    text-align: center; 
+    max-width: 80%; 
+}
+
+.gif-cao {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    display: block; 
+    margin: 20px auto 0 auto; 
+}
+
+.servicos {
+    flex-direction: column;
+    display: flex; 
+    height: auto; 
+    width: 100%; 
+    max-width: 500px; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0; 
+}
+
+.itens-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 196, 128, 0.097);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 10px;
+    padding: 15px; 
+    box-shadow: 0 5px 5px #000000;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.itens-servicos:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 5px 5px #000000;
+}
+
+.itens {
+    padding: 15px; 
+    width: 120px; 
+    height: 120px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.itens img {
+    width: 60px; 
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 5px; 
+}
+
+.itens:hover {
+    background-color: rgba(255, 209, 156, 0.61);
+    transition: 0.5s;
+}
+
+.texto-icon {
+    font-size: 18px; 
+    color: #fff;
+    text-decoration: none;
+}
+
+/* mapa,cards e outras coisas */
+.mapa {
+    height: 1200px; 
+    background-color: #f0f0f0; 
+    padding: 50px; 
+    text-align: center; 
+    color: #333; 
+    margin-top: 80px;
+}
+
+/* responsividade */
+
+/* responsividade do deader e da navbar */
+@media (max-width: 991.98px) { 
+    .navbar .base-top-area-inicial {
+        justify-content: center !important; 
+        text-align: center; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar-img { 
+        width: 40px; 
+        max-width: 50px;
+        margin-bottom: 5px; 
+    }
+    .titulo-nav {
+        font-size: 130%; 
+        margin: 5px 0; 
+    }
+    .navbar .btn-inicial {
+        width: 100%; 
+        justify-content: center; 
+        margin-top: 5px;
+    }
+    .navbar .btn-trans, .navbar .btn-ntrans {
+        width: 65px; 
+        height: 28px;
+        margin: 2px;
+        font-size: 0.7em; 
+    }
+    .navbar ul {
+        flex-direction: column; 
+        align-items: center; 
+        width: 100%;
+        padding: 0;
+    }
+    .navbar ul li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .main-header .base-top-area-inicial {
+        padding-left: 15px; 
+        padding-right: 15px;
+    }
+    .main-header .img-inicio {
+        width: auto; 
+        min-width: 80px; 
+        max-width: 120px; 
+    }
+    .main-header .btn-trans, .main-header .btn-ntrans {
+        width: 70px; 
+        height: 30px;
+        margin: 5px;
+        font-size: 0.8em;
+    }
+
+    .area-inicial {
+        flex-direction: column; 
+        padding: 0 15px; 
+        height: auto; 
+    }
+    .titulo-area, .servicos {
+        width: 100%; 
+        max-width: 100%; 
+        padding-bottom: 20px;
+    }
+    .dynapuff {
+        font-size: 150%; 
+        margin: 0; 
+    }
+    .gif-cao {
+        width: 90%;
+        max-width: 300px; 
+        margin-top: 15px;
+    }
+    .itens-servicos {
+        padding: 10px;
+        margin: 0;
+    }
+    .itens {
+        width: 90px; 
+        height: 90px; 
+        padding: 8px;
+        margin: 5px; 
+    }
+    .itens img {
+        width: 45px; 
+        height: 45px;
+    }
+    .texto-icon {
+        font-size: 14px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .main-header .img-inicio {
+        min-width: 60px; 
+        max-width: 90px;
+    }
+    .main-header .btn-trans, .main-header .btn-ntrans {
+        width: 60px;
+        height: 28px;
+        font-size: 0.75em;
+    }
+    .dynapuff {
+        font-size: 120%;
+    }
+    .itens {
+        width: 70px; 
+        height: 70px;
+        padding: 5px;
+        margin: 3px;
+    }
+    .itens img {
+        width: 35px;
+        height: 35px;
+    }
+    .texto-icon {
+        font-size: 12px;
+    }
+}

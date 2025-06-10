@@ -1,0 +1,15 @@
+GRUPO 1 3Y  MTECPI
+
+HOST ftp.tcc3edsmodetecgrupo1.tecnologia.ws
+USUARIO FTP tcc3yetecgrupo1t1
+PORTA 21
+SENHA FTP Tcc3yetecgrupo1t1@123
+END.
+tcc3yetecgrupo1t1.hospedagemdesites.ws
+
+SERVIDOR BANCO
+
+tccinfo.mysql.dbaas.com.br  
+USUARIO O BANCO tccinfo     
+NOME DO  BANCO tccinfo  
+SENHA  ROSA123456a#

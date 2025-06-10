@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Emporium</title>
+  <link rel="stylesheet" href="style.css" />
+ <style>
+    * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .container {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+  }
+
+  .left,
+  .right {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .left {
+    background: #ffcc00;
+  }
+
+  .left img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  .right {
+    background: #ff914d;
+    color: white;
+    flex-direction: column;
+  }
+
+  .right h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .right h2 {
+    margin-bottom: 10px;
+  }
+
+  .right p {
+    margin-top: 10px;
+  }
+
+  .right p a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  form {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  input:focus {
+    box-shadow: 0 0 0 2px #ffffffaa;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    margin: 15px 0;
+  }
+
+  .options a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #e6b800;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .left,
+    .right {
+      flex: 1 1 100%;
+    }
+  }
+ </style>
+</head>
+<body>
+  <main class="container">
+    <section class="left" aria-label="Imagem de um cachorro">
+      <img src="../imagens/gabzin cachorro.png" alt="Cachorro estiloso" />
+    </section>
+    <section class="right" aria-label="Login">
+      <h2>Bem-vindo ao...</h2>
+      <h1>Pet Emporium!</h1>
+      <a href="../cadastro/index.php">
+      <p>Não tem uma conta ainda? <a href="#">Inscrever-se</a></p>
+      </a>
+      <form>
+        <label for="usuario">Usuário</label>
+        <input type="text" id="usuario" name="usuario" required />
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required />
+
+        <div class="options">
+          <label><input type="checkbox" /> Mantenha-me logado</label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
