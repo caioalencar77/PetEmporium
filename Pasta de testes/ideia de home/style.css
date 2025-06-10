@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.flexbox{
+    display: flex;
+}
+.padding-10px{
+    padding: 10px;
+}
+.padding-5px{
+    padding: 5px;
+}
+.centralizar{
+    justify-content: center;
+}
+/*header do site*/
+.header-container{
+    background-color: rgb(255, 72, 0);
+    color: #fff;
+    justify-content: center;
+}
+/*navbar*/
+.navbar-container{
+    background-color: blue;
+    color: #fff;
+    justify-content: space-around;
+}
+/*section*/
+.container{
+    background-color: aqua;
+    width: 70%;
+    justify-content: center;
+}
+/*parte decorativa*/
+.div-lateral-direita{
+
+}
+.div-lateral-esquerda{
+    
+}

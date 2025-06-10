@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#ECEFFE, #CED6FB);
+}
+.card-list .card-item{
+    list-style: none;
+}
+.card-list{
+    width: 400px;
+    display: block;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: rgb(216, 237, 238);
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    transition: 0.2s ease;
+}
+.card-link{
+    background-color: black;
+}
+.card-list:hover{
+    border-color: #CED6FB;
+}
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-list .card-link .badge{
+    color: rgb(136, 127, 255);
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background-color: rgb(230, 204, 204);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-title{
+    font-size: 1.19rem;
+    color: black;
+    font-weight: 600;
+}
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: rgb(96, 96, 226);
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    border: 2px solid blue;
+    cursor: pointer;
+}
